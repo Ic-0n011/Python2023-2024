@@ -1,22 +1,25 @@
-import tkinter
 from textAnalyser import TextAnalyser
+from tkinter import *
+from tkinter import ttk
+text_cmd = "привет"
 
+def show_message():
+    k = entry.get()     # получаем введенный текст
+    if k.isdigit():
+        wc_width = int(k)
+        label["text"] = 
+    
 
-def run():
-    TextAnalyser(
-        source_file="text.txt",
-        parts_of_speech=["NOUN", "VERB"],
-        words_ammount=int(words_ammount.get())
-        )
-
-
-window = tkinter.Tk()
-window.geometry("1100x600+100+200")
-
-words_ammount = tkinter.Entry(window)
-words_ammount.pack()
-
-btn = tkinter.Button(window, text="Click", command=run)
-btn.pack()
-
-window.mainloop()
+root = Tk()
+root.geometry("500x300") 
+ 
+entry = ttk.Entry()
+entry.pack(anchor=NW, padx=6, pady=6)
+  
+btn = ttk.Button(text="Click", command=show_message)
+btn.pack(anchor=NW, padx=6, pady=6)
+ 
+label = ttk.Label()
+label.pack(anchor=NW, padx=6, pady=6)
+label["text"] = text_cmd
+root.mainloop()

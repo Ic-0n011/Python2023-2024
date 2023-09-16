@@ -10,11 +10,11 @@ class TextAnalyser:
                 self,
                 source_file=None,
                 destination_file="wordcloud.png",
-                parts_of_speech=["NOUN"],
-                words_ammount=100,
+                parts_of_speech=["NOUN"], # checkbutton
+                words_ammount=100, # entry - int
                 wc_width=800,
                 wc_height=600,
-                wc_background="black",
+                wc_background="black", #colorpicker
                 wc_margin=10
     ) -> None:
         """ вызывает цепочку методов """
